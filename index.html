@@ -85,7 +85,7 @@
       color:white;font-weight:700;box-shadow:0 12px 30px rgba(255,90,54,.28)
     }
     .mobile-toggle{display:none}
-
+    .mobile-menu{display:none}
     .hero{
       position:relative;min-height:100vh;display:grid;align-items:center;padding:120px 0 64px;
     }
@@ -93,11 +93,24 @@
       display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center;
     }
     .eyebrow{
-      display:inline-flex;align-items:center;gap:10px;
-      padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);
-      color:#fff;font-size:.92rem;font-weight:700;letter-spacing:.2px;
+      display:inline-flex;
+	  align-items:center;
+	  gap:10px;
+      padding:10px 14px;
+	  border-radius:999px;
+	  background:rgba(255,255,255,.06);
+	  border:1px solid rgba(255,255,255,.08);
+      color:orange;
+	  font-size:1.6rem;
+	  font-weight:700;
+	  letter-spacing:.2px;
     }
-    .eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 6px rgba(105,255,169,.12)}
+    .eyebrow .dot{
+		width:16px;height:16px;
+		border-radius:50%;
+		background:var(--ok);
+		box-shadow:0 0 0 6px rgba(105,255,169,.12);
+	}
     .hero h1{
       font-size:clamp(2.8rem, 5vw, 5.6rem);
       line-height:.95;margin:18px 0 18px;font-weight:900;letter-spacing:-.04em;
@@ -399,7 +412,7 @@ cookieconsent.run({"notice_banner_type":"simple","consent_type":"implied","palet
     <section class="hero" id="accueil">
       <div class="container hero-grid">
         <div class="reveal visible">
-          <span class="eyebrow"><span class="dot"></span> Coaching personnalisé inclus dans l'abonnement</span>
+          <span class="eyebrow"><span class="dot"></span> Coaching personnalisé inclus dans un abonnement sans engagement</span>
           <h1>La salle de sport <span class="gradient">premium</span> à L'Isle-sur-la-Sorgue.</h1>
           <p>
             Un club à taille humaine pour le culturisme, la remise en forme à tout âge, la préparation physique des sportifs de tous niveaux et l'accompagnement pour une reprise progressive après intervention chirurgicale.
