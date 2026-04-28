@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Club Sportislois — Salle de sport à L'Isle-sur-la-Sorgue</title>
+  <meta name="description" content="Club Sportislois à L'Isle-sur-la-Sorgue : coaching personnalisé inclus, musculation, remise en forme, préparation physique, reprise post-opératoire et ambiance premium." />
+  <meta name="keywords" content="salle de sport Isle sur la Sorgue, salle de Fitness L'Isle-sur-la-Sorgue, musculation Vaucluse, coaching inclus, culturisme, remise en forme, préparation physique" />
+  <meta name="theme-color" content="#0b0b0f" />
+  <meta name="google-site-verification" content="tBg8kEgUGujGxmqm8J8Pj2vLb1geKY3fjStZr-ZJgy4" />
+  <meta property="og:title" content="Club Sportislois — Salle de sport premium à L'Isle-sur-la-Sorgue-84800" />
+  <meta property="og:description" content="Coaching inclus, musculation, remise en forme, préparation physique et reprise post-opératoire, ambiance familiale." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#07070a;
+      --panel:#101118;
+      --panel-2:#161822;
+      --text:#f6f7fb;
+      --muted:#b5b9c9;
+      --line:rgba(255,255,255,.08);
+      --brand:#ff5a36;
+      --brand-2:#ff9d4d;
+      --ok:#69ffa9;
+      --shadow:0 20px 60px rgba(0,0,0,.35);
+      --radius:24px;
+      --max:1220px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:
+        radial-gradient(circle at 15% 15%, rgba(255,90,54,.18), transparent 30%),
+        radial-gradient(circle at 85% 10%, rgba(255,157,77,.14), transparent 25%),
+        linear-gradient(180deg, #09090d 0%, #07070a 100%);
+      color:var(--text);
+      overflow-x:hidden;
+    }
+
+    img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(calc(100% - 32px), var(--max));margin:auto}
+
+    .noise::before{
+      content:"";
+      position:fixed;inset:0;pointer-events:none;opacity:.035;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cg fill='%23ffffff'%3E%3Ccircle cx='3' cy='3' r='1'/%3E%3Ccircle cx='43' cy='78' r='1'/%3E%3Ccircle cx='145' cy='22' r='1'/%3E%3Ccircle cx='101' cy='131' r='1'/%3E%3Ccircle cx='173' cy='81' r='1'/%3E%3C/g%3E%3C/svg%3E");
+      z-index:2;
+    }
+
+    .topbar{
+      position:fixed;top:0;left:0;right:0;z-index:50;
+      backdrop-filter: blur(14px);
+      background:rgba(9,10,14,.56);
+      border-bottom:1px solid rgba(255,255,255,.06);
+      transition:.35s ease;
+    }
+    .topbar.scrolled{background:rgba(10,11,16,.88);box-shadow:0 16px 40px rgba(0,0,0,.28)}
+    .nav{
+      display:flex;align-items:center;justify-content:space-between;gap:20px;
+      min-height:78px;
+    }
+    .brand{
+      display:flex;align-items:center;gap:14px;font-weight:800;letter-spacing:.2px;
+    }
+    .brand-mark{
+      width:42px;height:42px;border-radius:14px;
+      background:linear-gradient(135deg, var(--brand), var(--brand-2));
+      box-shadow:0 12px 30px rgba(255,90,54,.35);
+      display:grid;place-items:center;font-weight:900;color:white;
+    }
+    .nav-links{display:flex;align-items:center;gap:26px;color:var(--muted)}
+    .nav-links a{transition:.2s ease;font-weight:500}
+    .nav-links a:hover{color:var(--text)}
+    .nav-cta{
+      display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:999px;
+      background:linear-gradient(135deg,var(--brand),var(--brand-2));
+      color:white;font-weight:700;box-shadow:0 12px 30px rgba(255,90,54,.28)
+    }
+    .mobile-toggle{display:none}
+    .mobile-menu{display:none}
+    .hero{
+      position:relative;min-height:100vh;display:grid;align-items:center;padding:120px 0 64px;
+    }
+    .hero-grid{
+      display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center;
+    }
+    .eyebrow{
+      display:inline-flex;
+	  align-items:center;
+	  gap:10px;
+      padding:10px 14px;
+	  border-radius:999px;
+	  background:rgba(255,255,255,.73);
+	  border:1px solid rgba(255,255,255,.08);
+      color:rgba(255, 90, 54, 0.99);
+	  font-size:1.6rem;
+	  font-weight:700;
+	  letter-spacing:.2px;
+    }
+    .eyebrow .dot{
+		width:16px;height:16px;
+		border-radius:50%;
+		background:var(--ok);
+		box-shadow:0 0 0 6px rgba(105,255,169,.12);
+	}
+    .hero h1{
+      font-size:clamp(2.8rem, 5vw, 5.6rem);
+      line-height:.95;margin:18px 0 18px;font-weight:900;letter-spacing:-.04em;
+    }
+    .hero .gradient{
+      background:linear-gradient(135deg, #fff 0%, #ffd8ca 45%, #ff9d4d 100%);
+      -webkit-background-clip:text;background-clip:text;color:transparent;
+    }
+    .hero p{
+      color:var(--muted);font-size:1.12rem;line-height:1.8;max-width:650px;margin:0 0 26px;
+    }
+    .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:12px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      border-radius:999px;padding:16px 22px;font-weight:800;letter-spacing:.2px;
+      transition:.25s ease;border:1px solid transparent;
+    }
+    .btn-primary{
+      color:white;background:linear-gradient(135deg,var(--brand),var(--brand-2));
+      box-shadow:0 16px 40px rgba(255,90,54,.28)
+    }
+    .btn-primary:hover{transform:translateY(-2px) scale(1.01)}
+    .btn-secondary{
+      background:rgba(255,255,255,.03);border-color:rgba(255,255,255,.08);color:var(--text)
+    }
+    .btn-secondary:hover{background:rgba(255,255,255,.06)}
+
+    .hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+    .stat{
+      padding:18px 16px;border-radius:22px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);
+      backdrop-filter:blur(10px)
+    }
+    .stat strong{display:block;font-size:1.4rem;margin-bottom:4px}
+    .stat span{color:var(--muted);font-size:.95rem}
+
+    .hero-visual{position:relative}
+    .hero-card{
+      position:relative;isolation:isolate;
+      border-radius:32px;overflow:hidden;border:1px solid rgba(255,255,255,.08);
+      background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
+      box-shadow:var(--shadow);
+      transform:perspective(1200px) rotateY(-7deg) rotateX(4deg);
+      animation:floaty 6s ease-in-out infinite;
+    }
+    .hero-card img{aspect-ratio:4/5;object-fit:cover;width:100%}
+    .hero-card::after{
+      content:"";position:absolute;inset:auto 0 0 0;height:40%;
+      background:linear-gradient(180deg, transparent, rgba(0,0,0,.72));
+    }
+    .floating-badge,.floating-panel{
+      position:absolute;border-radius:22px;background:rgba(10,11,16,.78);border:1px solid rgba(255,255,255,.08);
+      backdrop-filter: blur(18px);box-shadow:var(--shadow)
+    }
+    .floating-badge{
+      top:18px;left:-26px;padding:14px 16px;font-weight:800;animation:floaty 5.2s ease-in-out infinite .4s;
+    }
+    .floating-panel{
+      right:-20px;bottom:24px;padding:18px;max-width:260px;animation:floaty 5.8s ease-in-out infinite .2s;
+    }
+    .floating-panel strong{display:block;margin-bottom:8px}
+    .floating-panel p{margin:0;color:var(--muted);font-size:.95rem;line-height:1.6}
+
+    .section{padding:96px 0;position:relative}
+    .section-head{max-width:760px;margin:0 auto 42px;text-align:center}
+    .section-head h2{font-size:clamp(2rem, 3vw, 3.5rem);line-height:1.04;margin:0 0 14px;letter-spacing:-.03em}
+    .section-head p{margin:0;color:var(--muted);line-height:1.8;font-size:1.05rem}
+
+    .feature-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .feature{
+      background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.025));
+      border:1px solid rgba(255,255,255,.08);border-radius:26px;padding:28px;box-shadow:var(--shadow);
+      transform:translateY(0);transition:.35s ease
+    }
+    .feature:hover{transform:translateY(-8px)}
+    .icon{
+      width:56px;height:56px;border-radius:18px;display:grid;place-items:center;margin-bottom:20px;
+      background:linear-gradient(135deg, rgba(255,90,54,.2), rgba(255,157,77,.16));border:1px solid rgba(255,255,255,.08)
+    }
+    .feature h3{margin:0 0 10px;font-size:1.18rem}
+    .feature p{margin:0;color:var(--muted);line-height:1.75}
+
+    .premium-band{
+      padding:28px;border-radius:32px;border:1px solid rgba(255,255,255,.08);
+      background:linear-gradient(135deg, rgba(255,90,54,.14), rgba(255,157,77,.08), rgba(255,255,255,.04));
+      display:grid;grid-template-columns:1.15fr .85fr;gap:26px;align-items:center;box-shadow:var(--shadow)
+    }
+    .premium-band h3{font-size:2rem;line-height:1.06;margin:0 0 12px}
+    .premium-band p{margin:0;color:var(--muted);line-height:1.8}
+    .premium-points{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .point{padding:16px;border-radius:20px;background:rgba(0,0,0,.18);border:1px solid rgba(255,255,255,.08);font-weight:700}
+
+    .gallery-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
+    .gallery-main,.gallery-stack{display:grid;gap:18px}
+    .gallery-main{grid-template-columns:1fr 1fr}
+    .shot{
+      position:relative;overflow:hidden;border-radius:28px;min-height:280px;border:1px solid rgba(255,255,255,.08);box-shadow:var(--shadow)
+    }
+    .shot img{width:100%;height:100%;object-fit:cover;transition:transform .7s ease, filter .5s ease}
+    .shot:hover img{transform:scale(1.08);filter:saturate(1.05)}
+    .shot::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, transparent 40%, rgba(0,0,0,.45));}
+    .shot-label{position:absolute;left:18px;bottom:18px;z-index:1;font-weight:800}
+
+    .pricing-grid{display:grid;grid-template-columns:.78fr 1.22fr;gap:18px;align-items:stretch}
+    .price-card,.price-info{
+      border-radius:30px;padding:32px;border:1px solid rgba(255,255,255,.08);box-shadow:var(--shadow)
+    }
+    .price-card{
+      background:linear-gradient(160deg, rgba(255,90,54,.18), rgba(255,157,77,.12), rgba(255,255,255,.04));
+      display:flex;flex-direction:column;justify-content:space-between
+    }
+    .price-top small{display:block;color:#ffd8ca;font-weight:800;letter-spacing:.16em;text-transform:uppercase;margin-bottom:10px}
+    .price-card h3{font-size:3.5rem;line-height:1;margin:0}
+    .price-card h3 span{font-size:1.2rem;color:var(--muted);font-weight:700}
+    .price-card p{color:var(--muted);line-height:1.8}
+    .pill{
+      display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;
+      background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.08);font-size:.94rem;font-weight:700
+    }
+    .price-list{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:10px}
+    .price-item{padding:18px;border-radius:22px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)}
+    .price-item strong{display:block;margin-bottom:6px}
+    .price-item span{color:var(--muted);line-height:1.7}
+
+    .reviews-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px}
+    .review,.google-box{
+      border-radius:26px;padding:26px;border:1px solid rgba(255,255,255,.08);background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));box-shadow:var(--shadow)
+    }
+    .stars{font-size:1.1rem;letter-spacing:.12em;margin-bottom:12px}
+    .review p{color:var(--muted);line-height:1.8;margin:0 0 16px}
+    .review strong{display:block}
+    .google-box h3{margin:0 0 10px}
+    .google-box p{color:var(--muted);line-height:1.8}
+    .google-embed{
+      min-height:160px;border-radius:22px;border:1px dashed rgba(255,255,255,.14);
+      display:grid;place-items:center;text-align:center;padding:20px;background:rgba(255,255,255,.02);color:var(--muted)
+    }
+
+    .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:18px;align-items:stretch}
+    .contact-card,.map-card{
+      border-radius:30px;padding:30px;border:1px solid rgba(255,255,255,.08);background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));box-shadow:var(--shadow)
+    }
+    .contact-list{display:grid;gap:14px;margin-top:20px}
+    .contact-item{padding:16px 18px;border-radius:20px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)}
+    .contact-item span{display:block;color:var(--muted);margin-top:4px;line-height:1.7}
+    iframe{width:100%;height:100%;min-height:420px;border:0;border-radius:24px;filter:grayscale(.15) contrast(1.05)}
+
+    .cta-band{
+      margin-top:22px;padding:28px;border-radius:30px;border:1px solid rgba(255,255,255,.08);
+      background:linear-gradient(135deg, rgba(255,90,54,.15), rgba(255,255,255,.04));
+      display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap
+    }
+
+    .footer{padding:34px 0 60px;color:var(--muted)}
+    .footer-inner{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.08);padding-top:26px}
+
+    .whatsapp-float{
+      position:fixed;right:18px;bottom:18px;z-index:60;
+      width:64px;height:64px;border-radius:50%;display:grid;place-items:center;
+      background:linear-gradient(135deg,#25d366,#58f08b);color:#08170d;box-shadow:0 18px 50px rgba(37,211,102,.32);
+      font-size:1.55rem;font-weight:900;transition:.25s ease;
+    }
+    .whatsapp-float:hover{transform:translateY(-4px) scale(1.04)}
+
+    .reveal{opacity:0;transform:translateY(26px) scale(.985);transition:opacity .8s ease, transform .8s ease}
+    .reveal.visible{opacity:1;transform:none}
+    .delay-1{transition-delay:.08s}.delay-2{transition-delay:.16s}.delay-3{transition-delay:.24s}
+
+    @keyframes floaty{
+      0%,100%{transform:translateY(0)}
+      50%{transform:translateY(-10px)}
+    }
+
+    @media (max-width: 1100px){
+      .hero-grid,.gallery-wrap,.pricing-grid,.contact-grid,.premium-band{grid-template-columns:1fr}
+      .feature-grid{grid-template-columns:repeat(2,1fr)}
+      .reviews-grid{grid-template-columns:1fr 1fr}
+      .hero-card{transform:none}
+      .floating-badge{left:12px}
+      .floating-panel{right:12px}
+    }
+
+    @media (max-width: 820px){
+      .nav-links{display:none}
+      .mobile-toggle{display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08)}
+      .mobile-menu{
+        display:none;padding:0 0 18px
+      }
+      .mobile-menu.open{display:grid;gap:10px}
+      .mobile-menu a,.mobile-menu .nav-cta{padding:12px 14px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06)}
+      .hero{padding-top:104px}
+      .hero-stats,.price-list,.premium-points{grid-template-columns:1fr}
+      .feature-grid,.gallery-main,.reviews-grid{grid-template-columns:1fr}
+      .floating-badge,.floating-panel{position:static;margin-top:14px}
+      .section{padding:78px 0}
+      .cta-band{align-items:flex-start}
+    }
+  </style>
+</head>
+<body class="noise">
+<div class="gtranslate_wrapper"></div>
+<script>window.gtranslateSettings = {"default_language":"fr","languages":["fr","en","es"],"wrapper_selector":".gtranslate_wrapper","flag_style":"3d"}</script>
+<script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+
+<!-- Cookie Consent by TermsFeed https://www.TermsFeed.com -->
+<script type="text/javascript" src="https://www.termsfeed.com/public/cookie-consent/4.2.0/cookie-consent.js" charset="UTF-8"></script>
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({"notice_banner_type":"simple","consent_type":"implied","palette":"dark","language":"fr","page_load_consent_levels":["strictly-necessary","functionality","tracking","targeting"],"notice_banner_reject_button_hide":false,"preferences_center_close_button_hide":false,"page_refresh_confirmation_buttons":false,"website_name":"sportislois","website_privacy_policy_url":"mentions-legales.html"});
+});
+</script>
+
+<noscript>Free cookie consent management tool by <a href="https://www.termsfeed.com/">TermsFeed Generator</a></noscript>
+<!-- End Cookie Consent by TermsFeed https://www.TermsFeed.com -->
+
+
+
+
+
+<!-- Below is the link that users can use to open Preferences Center to change their preferences. Do not modify the ID parameter. Place it where appropriate, style it as needed. -->
+
+<a href="#" id="open_preferences_center">Update cookies preferences</a>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "club-sportislois",
+  "image": "https://res.cloudinary.com/ddpeetkek/image/upload/v1777031740/salle-du-club-sportislois.jpg",
+  "@id": "https://club-sportislois.fr",
+  "url": "https://club-sportislois.fr",
+  "telephone": "04 90 38 33 26",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "25 boulevard Paul Pons,",
+    "addressLocality": "L'Isle-sur-la-Sorgue",
+    "postalCode": "84800",
+    "addressCountry": "FR",
+    "addressRegion": "93"
+  },
+  "priceRange": "35€/month",
+  "sameAs": [
+    "https://www.facebook.com/clubsportislois84"
+  ],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "09:00",
+      "closes": "21:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Saturday"
+      ],
+      "opens": "09:00",
+      "closes": "13:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [],
+      "opens": "",
+      "closes": ""
+    }
+  ]
+}
+</script>
+  <header class="topbar" id="topbar">
+    <div class="container nav">
+      <a href="#accueil" class="brand" aria-label="Club Sportislois">
+        <span class="brand-mark">CS</span>
+        <span>Club Sportislois</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#expertises">Expertises</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#tarifs">Tarifs</a>
+        <a href="#avis">Avis</a>
+        <a href="#contact">Contact</a>
+        <a class="nav-cta" href="#contact">Séance d'essai</a>
+      </nav>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Ouvrir le menu">☰</button>
+    </div>
+    <div class="container mobile-menu" id="mobileMenu">
+      <a href="#expertises">Expertises</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#tarifs">Tarifs</a>
+      <a href="#avis">Avis</a>
+      <a href="#contact">Contact</a>
+      <a class="nav-cta" href="#contact">Séance d'essai</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="accueil">
+      <div class="container hero-grid">
+        <div class="reveal visible">
+          <span class="eyebrow"><span class="dot"></span> Coaching personnalisé inclus dans un abonnement sans engagement</span>
+          <h1>La salle de sport <span class="gradient">premium</span> à L'Isle-sur-la-Sorgue.</h1>
+          <p>
+            Un club à taille humaine pour le culturisme, la remise en forme à tout âge, la préparation physique des sportifs de tous niveaux et l'accompagnement pour une reprise progressive après intervention chirurgicale.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Je veux une séance d'essai</a>
+            <a class="btn btn-secondary" href="#tarifs">Voir les tarifs</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat">
+              <strong>35€ / mois</strong>
+              <span>Sans engagement</span>
+            </div>
+            <div class="stat">
+              <strong>Coaching inclus</strong>
+              <span>Sans coût caché</span>
+            </div>
+            <div class="stat">
+              <strong>Tout niveau</strong>
+              <span>Débutant à sportif confirmé</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal delay-1 visible">
+          <div class="hero-card">
+            <img src="https://res.cloudinary.com/ddpeetkek/image/upload/v1777025112/club-sportislois.fr_ambiance.jpg" alt="Salle de musculation Club Sportislois à L'Isle-sur-la-Sorgue" />
+          </div>
+          <div class="floating-badge">🔥 Ambiance familiale & résultats concrets</div>
+          <div class="floating-panel">
+            <strong>Votre avantage n°1</strong>
+            <p>Contrairement à beaucoup de clubs, l'abonnement inclut déjà l'accompagnement et le regard du coach.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+<section class="section">
+      <div class="container">
+        <div class="premium-band reveal">
+          <div>
+            <h3>Club Sportislois &#128521;</h3>
+            <p>
+              Salle de sport fondée en 1988 par Yves Conil, sous forme d'association à l'Isle sur la Sorgue.
+            </p>
+          </div>
+          <div class="premium-points">
+            <div class="point"><img src="https://res.cloudinary.com/ddpeetkek/image/upload/v1777031677/Yves-Conil.png" alt="Yves Conil, Fondateur du Club Sportislois, 1988"/></div>
+            <div class="point"><img src="https://res.cloudinary.com/ddpeetkek/image/upload/v1777031677/Yves-Conil.png" alt="Yves Conil, Fondateur du Club Sportislois, 1988"/></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="expertises">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Un accompagnement complet, dans une salle pensée pour progresser durablement.</h2>
+          <p>Chaque profil peut trouver sa place : objectif esthétique, santé, performance, entretien physique ou retour progressif à l'effort.</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature reveal">
+            <div class="icon">💪</div>
+            <h3>Culturisme & musculation</h3>
+            <p>Un environnement orienté progression, technique, hypertrophie et suivi précis de vos séances.</p>
+          </article>
+          <article class="feature reveal delay-1">
+            <div class="icon">✨</div>
+            <h3>Remise en forme à tout âge</h3>
+            <p>Des séances adaptées à votre niveau, votre rythme et votre condition physique, débutant comme confirmé.</p>
+          </article>
+          <article class="feature reveal delay-2">
+            <div class="icon">🏃</div>
+            <h3>Préparation physique</h3>
+            <p>Pour sportifs loisirs ou compétiteurs : renforcement, mobilité, reprise, puissance et conditionnement.</p>
+          </article>
+          <article class="feature reveal delay-3">
+            <div class="icon">🩺</div>
+            <h3>Reprise après opération</h3>
+            <p>Une approche progressive et sécurisée pour retrouver confiance, mobilité, tonus et qualité de vie.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="premium-band reveal">
+          <div>
+            <h3>Le vrai différenciateur du club : un abonnement simple, humain et efficace.</h3>
+            <p>
+              Ici, l'accompagnement n'est pas une option premium ajoutée après coup. Il fait partie de l'expérience. On vous observe, on vous corrige, on vous guide, on vous adapte le travail, et on construit une progression cohérente.
+            </p>
+          </div>
+          <div class="premium-points">
+            <div class="point">✔ Coaching personnalisé inclus</div>
+            <div class="point">✔ Séance d'essai gratuite</div>
+            <div class="point">✔ Ambiance conviviale et motivante</div>
+            <div class="point">✔ Tarifs accessibles sans engagement</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="galerie">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Une galerie vivante, authentique, centrée sur le club et ses adhérents.</h2>
+          <p>Des visuels réels pour montrer l'atmosphère du lieu, la qualité du matériel et l'esprit de communauté qui fait la différence.</p>
+        </div>
+
+        <div class="gallery-wrap">
+          <div class="gallery-main">
+            <div class="shot reveal"><img src="https://res.cloudinary.com/ddpeetkek/image/upload/v1777307778/salle-de-sport-ses-machines.png" alt="Vue d'ensemble de la salle Club Sportislois" /><span class="shot-label">Espace musculation</span></div>
+            <div class="shot reveal delay-1"><img src="https://res.cloudinary.com/ddpeetkek/image/upload/v1777031741/Coaching-individuel.jpg" alt="Coaching sportif au Club Sportislois" /><span class="shot-label">Coaching individuel</span></div>
+            <div class="shot reveal delay-2"><img src="https://res.cloudinary.com/ddpeetkek/image/upload/v1777031741/Encadrement-perso.jpg" alt="Séance encadrée au Club Sportislois" /><span class="shot-label">Encadrement personnalisé</span></div>
+            <div class="shot reveal delay-3"><img src="https://res.cloudinary.com/ddpeetkek/image/upload/v1777031740/Esprit-club.jpg" alt="Esprit club et convivialité Club Sportislois" /><span class="shot-label">Esprit club</span></div>
+          </div>
+          <div class="gallery-stack">
+            <div class="shot reveal"><img src="https://res.cloudinary.com/ddpeetkek/image/upload/v1777031739/Ambiance-motivante.jpg" alt="Affluence et ambiance à la salle Club Sportislois" /><span class="shot-label">Ambiance motivante</span></div>
+            <div class="shot reveal delay-1"><img src="https://res.cloudinary.com/ddpeetkek/image/upload/v1777031740/Coachs-et-adherents.jpg" alt="Accueil et coachs du Club Sportislois" /><span class="shot-label">Coachs & adhérents</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="tarifs">
+      <div class="container pricing-grid">
+        <div class="price-card reveal">
+          <div class="price-top">
+            <small>Tarif principal</small>
+            <h3>35€ <span>/ mois</span></h3>
+            <p>Sans engagement, avec accompagnement inclus.</p>
+          </div>
+          <span class="pill">🎓 Tarif réduit pour les étudiants</span>
+        </div>
+
+        <div class="price-info reveal delay-1">
+          <div class="section-head" style="text-align:left;max-width:none;margin:0 0 18px">
+            <h2 style="font-size:2.2rem;margin-bottom:10px">Un tarif clair, lisible et rassurant.</h2>
+            <p>Le but est simple : proposer une salle sérieuse, encadrée, sans faire exploser le budget mensuel.</p>
+          </div>
+          <div class="price-list">
+            <div class="price-item"><strong>Coaching inclus</strong><span>Le suivi fait partie de l'abonnement.</span></div>
+            <div class="price-item"><strong>Sans engagement</strong><span>Plus de liberté et moins de friction pour s'inscrire.</span></div>
+            <div class="price-item"><strong>Essai gratuit</strong><span>Idéal pour découvrir l'ambiance et le niveau d'accompagnement.</span></div>
+            <div class="price-item"><strong>Tarif étudiant</strong><span>Prévu pour rendre le club plus accessible.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="avis">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Une réputation qui s'appuie sur l'expérience réelle des adhérents.</h2>
+          
+        </div>
+
+        <div id="JFWebsiteWidget-019d301bb2ec749ba00946cae4336864e046"></div>
+<script src='https://eu.jotform.com/website-widgets/embed/019d301bb2ec749ba00946cae4336864e046'>
+</script>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-card reveal">
+            <div class="section-head" style="text-align:left;max-width:none;margin:0 0 18px">
+              <h2 style="font-size:2.2rem;margin-bottom:10px">Prêt à découvrir le club ?</h2>
+              <p>Appelez, écrivez ou venez directement pour votre séance d'essai et vos renseignements.</p>
+            </div>
+
+            <div class="contact-list">
+              <div class="contact-item"><strong>Adresse</strong><span>25 boulevard Paul Pons, 84800 L'Isle-sur-la-Sorgue</span></div>
+              <div class="contact-item"><strong>Téléphone</strong><span><a href="tel:+33490383326">04 90 38 33 26</a></span></div>
+              <div class="contact-item"><strong>Email</strong><span><a href="mailto:club-sportislois@orange.fr">club-sportislois@orange.fr</a></span></div>
+              <div class="contact-item"><strong>Horaires</strong><span>Du lundi au vendredi de 9h à 21h • Samedi et jours fériés de 9h à 13h</span></div>
+            </div>
+
+            <div class="cta-band">
+              <div>
+                <strong>Besoin d'un contact rapide ?</strong><br>
+                Obtenez les réponses à vos aux questions, demandez les modalités ou planifiez votre venue.
+              </div>
+              <div style="display:flex;gap:12px;flex-wrap:wrap">
+                <a class="btn btn-primary" href="tel:+33490383326">Appeler maintenant</a>
+                <a class="btn btn-secondary" href="https://wa.me/33490383326" target="_blank" rel="noopener">WhatsApp</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="map-card reveal delay-1">
+            <iframe title="Carte Club Sportislois" src="https://www.google.com/maps?q=25+Boulevard+Paul+Pons,+84800+L%27Isle-sur-la-Sorgue&output=embed"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+	
+	
+  </main>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Club Sportislois — Salle de sport à L'Isle-sur-la-Sorgue | <a href="mentions-legales.html">mentions légales</a></div>
+      <div>Coaching inclus • Musculation • Remise en forme • Préparation physique</div>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/33490383326" target="_blank" rel="noopener" aria-label="Contacter le club sur WhatsApp">✆</a>
+
+  <script>
+    const topbar = document.getElementById('topbar');
+    const onScroll = () => topbar.classList.toggle('scrolled', window.scrollY > 10);
+    document.addEventListener('scroll', onScroll);
+    onScroll();
+
+    const reveals = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.14 });
+    reveals.forEach(el => {
+      if(!el.classList.contains('visible')) io.observe(el);
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const mobileToggle = document.getElementById('mobileToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileToggle?.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+    mobileMenu?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => mobileMenu.classList.remove('open')));
+
+    /*
+      INTEGRATION AVIS GOOGLE AUTOMATIQUES
+      -----------------------------------
+      Option 1 : widget no-code (rapide)
+      Remplacez #googleReviewsWidget par le script d'un service comme Elfsight / SociableKIT / EmbedSocial.
+
+      Option 2 : Google Places API (plus technique)
+      - créez une clé API Google Maps Platform
+      - récupérez le place_id de l'établissement
+      - faites un appel côté serveur pour afficher les avis
+      - injectez ensuite le HTML dans #googleReviewsWidget
+
+      Important : Google Business Profile ne fournit pas simplement un petit script officiel public prêt à copier-coller pour afficher automatiquement les avis sur n'importe quel site. En pratique, on passe généralement par l'API Places ou un widget tiers.
+    */
+  </script>
+
+</body>
+</html>
